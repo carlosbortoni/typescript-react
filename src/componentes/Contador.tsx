@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ContadorValor from './ContadorValor';
 import './Contador.scss';
+import logRender from '../decorators/logRender';
 
 interface IContadorProps {
   valorInicial?: number
@@ -10,6 +11,7 @@ interface IContadorState {
   valor: number
 }
 
+@logRender
 export default class Contador extends Component<IContadorProps> {
 
   public state = {
